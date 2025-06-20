@@ -1,4 +1,4 @@
-import useGetUserProfile from "@/Hooks/UseGetUserProfile";
+// import useGetUserProfile from "@/Hooks/UseGetUserProfile";
 import store from "@/redux/store";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import React, { useState } from "react";
@@ -11,6 +11,7 @@ import { Badge } from "./ui/badge";
 import { AtSign, Heart, MessageCircle } from "lucide-react";
 import Bottomsidebar from "./Bottomsidebar";
 import { setUserProfile } from "@/redux/authSlice";
+import useGetUserProfile from "@/Hooks/useGetUserProfile";
 
 export default function Profile() {
   const params = useParams();
