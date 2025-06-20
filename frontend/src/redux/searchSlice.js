@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchUsersBySearch = createAsyncThunk(
   "search/fetchUsersBySearch",
   async (searchTerm) => {
-    const { data } = await axios.get(`http://localhost:8080/api/v1/user/search?username=${searchTerm}`, { withCredentials: true });
+    const { data } = await axios.get(`https://momento-7gr6.onrender.com/api/v1/user/search?username=${searchTerm}`, { withCredentials: true });
     return data.users;
   }
 );

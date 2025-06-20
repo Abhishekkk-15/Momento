@@ -71,7 +71,7 @@ function App() {
   const { user } = useSelector((store) => store.auth);
   useEffect(() => {
     if (user) {
-      const socketio = io("http://localhost:8080", {
+      const socketio = io("https://momento-7gr6.onrender.com", {
         query: {
           userId: user._id,
         },

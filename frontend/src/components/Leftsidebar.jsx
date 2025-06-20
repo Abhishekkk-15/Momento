@@ -42,7 +42,7 @@ export default function Leftsidebar() {
 
   const logouthandler = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/v1/user/logout", {
+      const res = await axios.get("https://momento-7gr6.onrender.com/api/v1/user/logout", {
         withCredentials: true,
       });
       if (res.data.success) {

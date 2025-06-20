@@ -11,12 +11,7 @@ function Explore() {
         {posts && posts.length > 0 ? (
           posts.map((post) => (
             <div key={post?._id} className="relative group cursor-pointer">
-              {/* <img
-              key={post._id}
-              className="rounded my-2 aspect-[4/4] object-cover border-l border-r border-gray-400"
-              src={post.image}
-              alt="post img"
-            /> */}
+              
               {post?.video && /\.(mp4|webm|ogg)$/i.test(post.video) ? (
                 <video
                   src={post.video}

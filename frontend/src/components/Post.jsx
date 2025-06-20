@@ -32,17 +32,13 @@ export default function Post({ post }) {
   const [liked, setLiked] = useState(post.likes.includes(user?._id) || false);
   const [postLike, setPostLike] = useState(post.likes.length);
   const [comment, setComment] = useState(post.comments);
-  // const isBookmarked = user?.bookmarks?.includes(post._id);
 
-  // const isBookmarked =
-  // Array.isArray(user?.bookmarks) && user.bookmarks.includes(post._id);
   const [bookmarked, setBookmarked] = useState(
     Array.isArray(user?.bookmarks) && user.bookmarks.includes(post._id)
   );
 
   const dispatch = useDispatch();
-  // const isFollowing = user?.following?.includes(userProfile?._id);
-  // const isFollowing = user?.following?.includes(post.author._id);
+
   const isFollowing = useMemo(() => {
     return user?.following?.includes(post.author._id);
   }, [user?.following, post.author._id]);
@@ -58,7 +54,7 @@ export default function Post({ post }) {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `http://localhost:8080/api/v1/post/${post._id}/${action}`,
+        `https://momento-7gr6.onrender.com/api/v1/post/${post._id}/${action}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -86,7 +82,7 @@ export default function Post({ post }) {
   const commentHandler = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/v1/post/${post._id}/comment`,
+        `https://momento-7gr6.onrender.com/api/v1/post/${post._id}/comment`,
         { text },
         {
           headers: { "Content-Type": "application/json" },
@@ -111,7 +107,7 @@ export default function Post({ post }) {
   const deleteHandler = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:8080/api/v1/post/delete/${post?._id}`,
+        `https://momento-7gr6.onrender.com/api/v1/post/delete/${post?._id}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -130,7 +126,7 @@ export default function Post({ post }) {
   const bookmarkHandler = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/v1/post/${post?._id}/bookmark`,
+        `https://momento-7gr6.onrender.com/api/v1/post/${post?._id}/bookmark`,
         { withCredentials: true }
       );
       console.log("BOOKMARK RESPONSE:", res.data);
@@ -167,7 +163,7 @@ export default function Post({ post }) {
   const handleFollow = async () => {
   try {
     const res = await fetch(
-      `http://localhost:8080/api/v1/user/followorunfollow/${post.author._id}`,
+      `https://momento-7gr6.onrender.com/api/v1/user/followorunfollow/${post.author._id}`,
       {
         method: "POST",
         credentials: "include",

@@ -1,5 +1,4 @@
-//import { Label } from "@radix-ui/react-label";
-//import Input_ from "postcss/lib/input";
+
 import React, { useEffect, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -27,7 +26,7 @@ export default function Login() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:8080/api/v1/user/login",
+        "https://momento-7gr6.onrender.com/api/v1/user/login",
         input,
         {
           headers: {

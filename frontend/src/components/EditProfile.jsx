@@ -54,7 +54,7 @@ function EditProfile() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:8080/api/v1/user/profile/edit",
+        "https://momento-7gr6.onrender.com/api/v1/user/profile/edit",
         formData,
         {
           headers: {

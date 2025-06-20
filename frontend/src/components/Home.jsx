@@ -11,15 +11,6 @@ export default function Home() {
   useGetAllPost();
   useSuggestedUsers();
   return (
-    // <div className='flex'>
-    //    <div className='flex-grow'>
-    //      <Feed/>
-    //      <Outlet/>
-    //    </div>
-    //    <div className='fixed right-0 top-0'>
-    //     <RightSidebar />
-    //    </div>
-    // </div>
      <div className='flex relative w-full'>
       <div className='flex flex-col flex-grow w-full max-w-[600px] mx-auto'>
         {/* Show StorySection above Feed */}

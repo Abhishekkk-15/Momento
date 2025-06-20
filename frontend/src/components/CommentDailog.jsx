@@ -36,7 +36,7 @@ export default function CommentDailog({ open, setOpen }) {
   const sendmessageHandler = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/v1/post/${selectedPost?._id}/comment`,
+        `https://momento-7gr6.onrender.com/api/v1/post/${selectedPost?._id}/comment`,
         { text },
         {
           headers: {

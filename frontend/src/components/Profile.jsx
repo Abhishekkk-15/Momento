@@ -30,7 +30,7 @@ export default function Profile() {
   const handleFollow = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/user/followorunfollow/${userProfile?._id}`,
+        `https://momento-7gr6.onrender.com/api/v1/user/followorunfollow/${userProfile?._id}`,
         {
           method: "POST",
           credentials: "include",
@@ -45,7 +45,7 @@ export default function Profile() {
 
         // ✅ 2. Re-fetch the userProfile to update follower/following count
         const profileRes = await fetch(
-          `http://localhost:8080/api/v1/user/${userId}/profile`,
+          `https://momento-7gr6.onrender.com/api/v1/user/${userId}/profile`,
           {
             credentials: "include",
           }

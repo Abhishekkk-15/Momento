@@ -15,7 +15,7 @@ export default function SuggestedUser() {
   const handleFollow = async (userId) => {
     try {
       const res = await fetch(
-        `http://localhost:8080/api/v1/user/followorunfollow/${userId}`,
+        `https://momento-7gr6.onrender.com/api/v1/user/followorunfollow/${userId}`,
         {
           method: "POST",
           credentials: "include"

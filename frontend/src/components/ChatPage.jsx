@@ -21,7 +21,7 @@ function ChatPage() {
   const sendMessageHandler = async (receiverId) => {
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/v1/message/send/${receiverId}`,
+        `https://momento-7gr6.onrender.com/api/v1/message/send/${receiverId}`,
         { textMessage },
         {
           headers: {

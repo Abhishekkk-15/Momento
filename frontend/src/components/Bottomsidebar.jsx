@@ -22,21 +22,6 @@ export default function Bottomsidebar() {
     localStorage.getItem("activeTab") || "Home"
   );
 
-  //   const logouthandler = async () => {
-  //     try {
-  //       const res = await axios.get("http://localhost:8080/api/v1/user/logout", {
-  //         withCredentials: true,
-  //       });
-  //       if (res.data.success) {
-  //         dispatch(setAuthUser(null));
-  //         navigate("/login");
-  //         toast.success(res.data.message);
-  //       }
-  //     } catch (error) {
-  //       toast.error(error.response.message||"Logout failed");
-  //     }
-  //   };
-
   const createPostHandler = () => {
     setOpen(true);
   };

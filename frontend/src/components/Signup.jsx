@@ -26,7 +26,7 @@ export default function Signup() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:8080/api/v1/user/register",
+        "https://momento-7gr6.onrender.com/api/v1/user/register",
         input,
         {
           headers: {

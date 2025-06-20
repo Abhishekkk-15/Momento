@@ -1,7 +1,5 @@
  import React from 'react'
  import Posts from './Posts'
-// import InstaPost from './Instapost'
-
 
  export default function Feed() {
    return (

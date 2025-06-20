@@ -28,24 +28,7 @@ const authSlice = createSlice({
     setSelectedUser: (state, action) => {
       state.selectedUser = action.payload;
     },
-    // updateFollowing: (state, action) => {
-    //   const userId = action.payload;
 
-    //   if (!state.user.following) {
-    //     state.user.following = [];
-    //   }
-
-    //   if (state.user.following.includes(userId)) {
-    //     // Unfollow
-    //     state.user.following = state.user.following.filter(
-    //       (id) => id !== userId
-    //     );
-    //   } else {
-    //     // Follow
-    //     state.user.following.push(userId);
-    //   }
-    //   localStorage.setItem("userInfo", JSON.stringify(state.user));
-    // },
     updateFollowing: (state, action) => {
       const userId = action.payload;
 
