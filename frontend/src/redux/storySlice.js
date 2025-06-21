@@ -41,18 +41,16 @@ export const uploadStory = createAsyncThunk(
     console.log("Token:", user?.token); 
 
     const { data } = await axios.post(
-      "http://localhost:8080/api/v1/stories",
+      "https://momento-7gr6.onrender.com/api/v1/stories",
       formData,
       {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${user.token}`, 
-          // Authorization: `Bearer ${token}`, 
+           
           
         },
         withCredentials: true,
-        // Authorization: `Bearer ${token}`, // use the fallback-safe variable
-
       }
     );
 
@@ -69,7 +67,7 @@ export const deleteStory = createAsyncThunk(
 
     const token = user?.token || localStorage.getItem("token");
 
-    await axios.delete(`http://localhost:8080/api/v1/stories/${id}`, {
+    await axios.delete(`https://momento-7gr6.onrender.com/api/v1/stories/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -90,7 +88,7 @@ export const markStoryViewed = createAsyncThunk(
     const token = user?.token || localStorage.getItem("token");
 
     await axios.put(
-      `http://localhost:8080/api/v1/stories/view/${id}`,
+      `https://momento-7gr6.onrender.com/api/v1/stories/view/${id}`,
       {},
       {
         headers: {
@@ -113,7 +111,7 @@ export const fetchStoryViewers = createAsyncThunk(
     const token = user?.token || localStorage.getItem("token");
 
     const { data } = await axios.get(
-      `http://localhost:8080/api/v1/stories/viewers/${id}`,
+      `https://momento-7gr6.onrender.com/api/v1/stories/viewers/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

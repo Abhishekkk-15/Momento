@@ -67,13 +67,6 @@ const AddStory = () => {
         )}
       </div>
       <h1 className="pt-2 text-pink-500">{user?.username}</h1>
-      {/* <label
-        htmlFor="add-story-file"
-        className="absolute bottom-0 right-0 bg-blue-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center border-2 border-white cursor-pointer"
-        title="Add Story"
-      >
-        +
-      </label> */}
       
       <p className="text-xs mt-1 text-center text-blue-500">Your Story</p>
 
